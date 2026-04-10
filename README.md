@@ -96,6 +96,7 @@ brew install python3 # Python 3
 brew install tree # 目錄結構顯示
 brew install ffmpeg # 影音轉檔
 brew install yt-dlp # YouTube 下載
+brew install gnupg # GPG
 
 brew install --cask ghostty
 ```
