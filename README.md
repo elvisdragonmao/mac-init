@@ -114,6 +114,8 @@ brew install tree # 顯示目錄結構
 brew install vim # 終端文字編輯器
 brew install yt-dlp # 網路影片下載工具
 brew install eza # ls 的增強版本
+brew install zoxide # cd 的增強版本
+brew install fzf # 模糊搜尋工具
 
 brew install --cask font-jetbrains-mono-nerd-font # 程式設計字型
 brew install --cask ghostty # 終端機
