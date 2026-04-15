@@ -6,7 +6,9 @@
 
 ## 設定
 
-首先先到 Display 調高螢幕解析度（網址：<a href="x-apple.systempreferences:com.apple.preference.displays">`x-apple.systempreferences:com.apple.preference.displays`</a>）
+首先先到 Display 調高螢幕解析度
+
+> 快捷鍵 `Options` + `F1(☀)` 或是複製貼上網址：<a href="x-apple.systempreferences:com.apple.preference.displays">`x-apple.systempreferences:com.apple.preference.displays`</a>
 
 剩下一個個來太慢了，直接下指令吧：
 
