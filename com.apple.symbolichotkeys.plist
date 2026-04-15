@@ -1,0 +1,118 @@
+{
+    AppleSymbolicHotKeys =     {
+        15 =         {
+            enabled = 0;
+        };
+        16 =         {
+            enabled = 0;
+        };
+        164 =         {
+            enabled = 0;
+            value =             {
+                parameters =                 (
+                    65535,
+                    65535,
+                    0
+                );
+                type = standard;
+            };
+        };
+        17 =         {
+            enabled = 0;
+        };
+        176 =         {
+            enabled = 1;
+            value =             {
+                parameters =                 (
+                    32,
+                    49,
+                    8388608
+                );
+                type = standard;
+            };
+        };
+        18 =         {
+            enabled = 0;
+        };
+        19 =         {
+            enabled = 0;
+        };
+        20 =         {
+            enabled = 0;
+        };
+        21 =         {
+            enabled = 0;
+        };
+        22 =         {
+            enabled = 0;
+        };
+        23 =         {
+            enabled = 0;
+        };
+        24 =         {
+            enabled = 0;
+        };
+        25 =         {
+            enabled = 0;
+        };
+        26 =         {
+            enabled = 0;
+        };
+        60 =         {
+            enabled = 1;
+            value =             {
+                parameters =                 (
+                    32,
+                    49,
+                    262144
+                );
+                type = standard;
+            };
+        };
+        61 =         {
+            enabled = 1;
+            value =             {
+                parameters =                 (
+                    32,
+                    49,
+                    786432
+                );
+                type = standard;
+            };
+        };
+        64 =         {
+            enabled = 0;
+            value =             {
+                parameters =                 (
+                    32,
+                    49,
+                    1048576
+                );
+                type = standard;
+            };
+        };
+        65 =         {
+            enabled = 0;
+            value =             {
+                parameters =                 (
+                    32,
+                    49,
+                    1572864
+                );
+                type = standard;
+            };
+        };
+        79 =         {
+            enabled = 1;
+        };
+        80 =         {
+            enabled = 1;
+        };
+        81 =         {
+            enabled = 1;
+        };
+        82 =         {
+            enabled = 1;
+        };
+    };
+}

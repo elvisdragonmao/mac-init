@@ -1,0 +1,434 @@
+{
+	"global": { "show_in_menu_bar": false },
+	"profiles": [
+		{
+			"complex_modifications": {
+				"rules": [
+					{
+						"description": "Open Vesktop by left option + 3",
+						"manipulators": [
+							{
+								"from": {
+									"key_code": "3",
+									"modifiers": {
+										"mandatory": ["left_option"],
+										"optional": ["caps_lock"]
+									}
+								},
+								"to": [{ "software_function": { "open_application": { "file_path": "/Applications/Vesktop.app" } } }],
+								"type": "basic"
+							}
+						]
+					},
+					{
+						"description": "Open Sublime by left option + shift + x",
+						"manipulators": [
+							{
+								"from": {
+									"key_code": "x",
+									"modifiers": {
+										"mandatory": ["left_option", "left_shift"],
+										"optional": ["caps_lock"]
+									}
+								},
+								"to": [{ "software_function": { "open_application": { "file_path": "/Applications/Sublime Text.app" } } }],
+								"type": "basic"
+							}
+						]
+					},
+					{
+						"description": "Open VS Code by left option + 2",
+						"manipulators": [
+							{
+								"from": {
+									"key_code": "2",
+									"modifiers": {
+										"mandatory": ["left_option"],
+										"optional": ["caps_lock"]
+									}
+								},
+								"to": [{ "software_function": { "open_application": { "file_path": "/Applications/Visual Studio Code.app" } } }],
+								"type": "basic"
+							}
+						]
+					},
+					{
+						"description": "Open Telegram by left option + 0",
+						"manipulators": [
+							{
+								"from": {
+									"key_code": "0",
+									"modifiers": { "mandatory": ["left_option"] }
+								},
+								"to": [{ "software_function": { "open_application": { "file_path": "/Applications/Telegram.app" } } }],
+								"type": "basic"
+							}
+						]
+					},
+					{
+						"description": "Open Discord by left option + 3",
+						"enabled": false,
+						"manipulators": [
+							{
+								"from": {
+									"key_code": "3",
+									"modifiers": {
+										"mandatory": ["left_option"],
+										"optional": ["caps_lock"]
+									}
+								},
+								"to": [{ "software_function": { "open_application": { "file_path": "/Applications/Discord.app" } } }],
+								"type": "basic"
+							}
+						]
+					},
+					{
+						"description": "Fn alone -> Esc",
+						"manipulators": [
+							{
+								"conditions": [
+									{
+										"name": "fn-esc",
+										"type": "variable_if",
+										"value": 1
+									}
+								],
+								"from": {
+									"key_code": "fn",
+									"modifiers": { "optional": ["shift", "option", "control", "command", "caps_lock"] }
+								},
+								"to": [
+									{
+										"key_code": "fn",
+										"lazy": true
+									}
+								],
+								"to_if_alone": [{ "key_code": "escape" }],
+								"type": "basic"
+							},
+							{
+								"from": {
+									"key_code": "fn",
+									"modifiers": { "optional": ["shift", "option", "control", "command", "caps_lock"] }
+								},
+								"to": [{ "key_code": "fn" }],
+								"to_delayed_action": {
+									"to_if_canceled": [
+										{
+											"set_variable": {
+												"name": "fn-esc",
+												"value": 0
+											}
+										}
+									],
+									"to_if_invoked": [
+										{
+											"set_variable": {
+												"name": "fn-esc",
+												"value": 0
+											}
+										}
+									]
+								},
+								"to_if_alone": [
+									{ "key_code": "escape" },
+									{
+										"set_variable": {
+											"name": "fn-esc",
+											"value": 1
+										}
+									},
+									{
+										"select_input_source": {
+											"input_source_id": "com.apple.keylayout.ABC",
+											"language": "^en$"
+										}
+									}
+								],
+								"type": "basic"
+							}
+						]
+					},
+					{
+						"description": "Open FireFox by left option + 1",
+						"manipulators": [
+							{
+								"from": {
+									"key_code": "1",
+									"modifiers": {
+										"mandatory": ["left_option"],
+										"optional": ["caps_lock"]
+									}
+								},
+								"to": [{ "software_function": { "open_application": { "file_path": "/Applications/Firefox Developer Edition.app" } } }],
+								"type": "basic"
+							}
+						]
+					},
+					{
+						"description": "Open Chrome by left option + shift + 1",
+						"manipulators": [
+							{
+								"from": {
+									"key_code": "1",
+									"modifiers": {
+										"mandatory": ["left_option", "left_shift"],
+										"optional": ["caps_lock"]
+									}
+								},
+								"to": [{ "software_function": { "open_application": { "file_path": "/Applications/Google Chrome.app" } } }],
+								"type": "basic"
+							}
+						]
+					},
+					{
+						"description": "Open Notion by left option + shift + 2",
+						"manipulators": [
+							{
+								"from": {
+									"key_code": "2",
+									"modifiers": {
+										"mandatory": ["left_option", "left_shift"],
+										"optional": ["caps_lock"]
+									}
+								},
+								"to": [{ "software_function": { "open_application": { "file_path": "/Applications/Notion.app" } } }],
+								"type": "basic"
+							}
+						]
+					},
+					{
+						"description": "Open iTerm by left option + 4",
+						"enabled": false,
+						"manipulators": [
+							{
+								"from": {
+									"key_code": "4",
+									"modifiers": { "mandatory": ["left_option"] }
+								},
+								"to": [{ "software_function": { "open_application": { "file_path": "/Users/em/Applications/iTerm.app" } } }],
+								"type": "basic"
+							}
+						]
+					},
+					{
+						"description": "Open Ghostty by left option + 4",
+						"manipulators": [
+							{
+								"from": {
+									"key_code": "4",
+									"modifiers": { "mandatory": ["left_option"] }
+								},
+								"to": [{ "software_function": { "open_application": { "file_path": "/Applications/Ghostty.app" } } }],
+								"type": "basic"
+							}
+						]
+					},
+					{
+						"description": "Open Cursor by left option + 2",
+						"enabled": false,
+						"manipulators": [
+							{
+								"from": {
+									"key_code": "2",
+									"modifiers": {
+										"mandatory": ["left_option"],
+										"optional": ["caps_lock"]
+									}
+								},
+								"to": [{ "software_function": { "open_application": { "file_path": "/Applications/Cursor.app" } } }],
+								"type": "basic"
+							}
+						]
+					},
+					{
+						"description": "Open AFFiNE by left option + 5",
+						"manipulators": [
+							{
+								"from": {
+									"key_code": "5",
+									"modifiers": { "mandatory": ["left_option"] }
+								},
+								"to": [{ "software_function": { "open_application": { "file_path": "/Applications/AFFiNE.app" } } }],
+								"type": "basic"
+							}
+						]
+					},
+					{
+						"description": "Open LINE by left option + 9",
+						"manipulators": [
+							{
+								"from": {
+									"key_code": "9",
+									"modifiers": { "mandatory": ["left_option"] }
+								},
+								"to": [{ "software_function": { "open_application": { "file_path": "/Applications/LINE.app" } } }],
+								"type": "basic"
+							}
+						]
+					},
+					{
+						"description": "Open Figma by left option + Q",
+						"manipulators": [
+							{
+								"from": {
+									"key_code": "q",
+									"modifiers": {
+										"mandatory": ["left_option"],
+										"optional": ["caps_lock"]
+									}
+								},
+								"to": [{ "software_function": { "open_application": { "file_path": "/Applications/Figma.app" } } }],
+								"type": "basic"
+							}
+						]
+					},
+					{
+						"description": "Open Calendar by left option + E",
+						"manipulators": [
+							{
+								"from": {
+									"key_code": "e",
+									"modifiers": {
+										"mandatory": ["left_option"],
+										"optional": ["caps_lock"]
+									}
+								},
+								"to": [{ "software_function": { "open_application": { "file_path": "/System/Applications/Calendar.app" } } }],
+								"type": "basic"
+							}
+						]
+					},
+					{
+						"description": "Open Reminders by left option + X",
+						"manipulators": [
+							{
+								"from": {
+									"key_code": "x",
+									"modifiers": {
+										"mandatory": ["left_option"],
+										"optional": ["caps_lock"]
+									}
+								},
+								"to": [{ "software_function": { "open_application": { "file_path": "/System/Applications/Reminders.app" } } }],
+								"type": "basic"
+							}
+						]
+					},
+					{
+						"description": "Open Element by left option + C",
+						"manipulators": [
+							{
+								"from": {
+									"key_code": "c",
+									"modifiers": {
+										"mandatory": ["left_option"],
+										"optional": ["caps_lock"]
+									}
+								},
+								"to": [{ "software_function": { "open_application": { "file_path": "/Applications/Element.app" } } }],
+								"type": "basic"
+							}
+						]
+					},
+					{
+						"description": "Open Finder by left option + '",
+						"manipulators": [
+							{
+								"from": {
+									"key_code": "quote",
+									"modifiers": { "mandatory": ["left_option"] }
+								},
+								"to": [{ "software_function": { "open_application": { "file_path": "/System/Library/CoreServices/Finder.app" } } }],
+								"type": "basic"
+							}
+						]
+					},
+					{
+						"description": "Open Spotify by left option + \\",
+						"manipulators": [
+							{
+								"from": {
+									"key_code": "backslash",
+									"modifiers": { "mandatory": ["left_option"] }
+								},
+								"to": [{ "software_function": { "open_application": { "file_path": "/Applications/Spotify.app" } } }],
+								"type": "basic"
+							}
+						]
+					},
+					{
+						"description": "Open Finder by F3",
+						"manipulators": [
+							{
+								"from": {
+									"key_code": "f3",
+									"modifiers": { "optional": ["caps_lock"] }
+								},
+								"to": [{ "shell_command": "open ~/Desktop" }],
+								"type": "basic"
+							}
+						]
+					},
+					{
+						"description": "Open Notes by left option + backtick",
+						"manipulators": [
+							{
+								"from": {
+									"key_code": "grave_accent_and_tilde",
+									"modifiers": {
+										"mandatory": ["left_option"],
+										"optional": ["caps_lock"]
+									}
+								},
+								"to": [{ "software_function": { "open_application": { "file_path": "/System/Applications/Notes.app" } } }],
+								"type": "basic"
+							}
+						]
+					},
+					{
+						"description": "Kill option + R",
+						"enabled": false,
+						"manipulators": [
+							{
+								"from": {
+									"key_code": "r",
+									"modifiers": {
+										"mandatory": ["left_option"],
+										"optional": ["caps_lock"]
+									}
+								},
+								"to": [{ "key_code": "left_option" }, { "key_code": "r" }],
+								"type": "basic"
+							}
+						]
+					}
+				]
+			},
+			"devices": [
+				{
+					"identifiers": {
+						"is_keyboard": true,
+						"is_pointing_device": true,
+						"product_id": 591,
+						"vendor_id": 1452
+					},
+					"ignore": false
+				}
+			],
+			"fn_function_keys": [
+				{
+					"from": { "key_code": "f3" },
+					"to": [{ "key_code": "f3" }]
+				},
+				{
+					"from": { "key_code": "f4" },
+					"to": [{ "key_code": "escape" }]
+				}
+			],
+			"name": "Default profile",
+			"selected": true,
+			"virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
+		}
+	]
+}
