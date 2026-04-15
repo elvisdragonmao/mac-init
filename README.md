@@ -113,6 +113,7 @@ brew install thefuck # 指令更正工具
 brew install tree # 顯示目錄結構
 brew install vim # 終端文字編輯器
 brew install yt-dlp # 網路影片下載工具
+brew install eza # ls 的增強版本
 
 brew install --cask font-jetbrains-mono-nerd-font # 程式設計字型
 brew install --cask ghostty # 終端機
@@ -163,7 +164,23 @@ git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git ${Z
 ### .zshrc
 
 ```bash
+mkdir -p ~/.local/bin
+curl -L "https://raw.githubusercontent.com/elvisdragonmao/mac-init/refs/heads/main/better-git-branch.sh" -o ~/.local/bin/better-git-branch.sh
 curl -L "https://raw.githubusercontent.com/elvisdragonmao/mac-init/refs/heads/main/.zshrc" -o ~/.zshrc
+```
+
+### Git 設定
+
+```bash
+echo .DS_Store >> ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
+git config --global pull.rebase true
+git config --global user.name ""
+git config --global user.email ""
+
+# 如果要簽名
+git config --global commit.gpgsign true
+git config --global gpg.program gpg
 ```
 
 ### Vim 設定
