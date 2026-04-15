@@ -6,13 +6,11 @@
 
 ## 設定
 
-首先先處理不能用指令的設定，連結會直接進入設定：
+首先先到 Display 調高螢幕解析度（網址：<a href="x-apple.systempreferences:com.apple.preference.displays">`x-apple.systempreferences:com.apple.preference.displays`</a>）
 
-* 到 [Display](x-apple.systempreferences:com.apple.preference.displays) 調高螢幕解析度
+剩下一個個來太慢了，直接下指令吧：
 
-其他去設定太慢了，直接下指令吧：
-
-> 參考自：<https://macos-defaults.com/>
+> 大多參考自：<https://macos-defaults.com>
 
 ### Dock
 
@@ -123,6 +121,8 @@ brew install --cask telegram # 即時通訊軟體
 ### Ghostty 設定
 
 這裡可以打開鬼鬼來用囉！記得先給他 Full Disk Access 權限不然後面可能會卡指令。
+
+網址：[`x-apple.systempreferences:com.apple.preference.security?Privacy_AllFiles`](x-apple.systempreferences:com.apple.preference.security?Privacy_AllFiles)
 
 ![開啟 Full Disk Access](img/full-disk-access.png)
 
