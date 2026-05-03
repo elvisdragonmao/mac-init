@@ -32,7 +32,6 @@ eval $(thefuck --alias)
 alias pip='uv run pip'
 
 alias coffee='sudo pmset -a disablesleep'
-alias pyenv="source ~/.venv/bin/activate"
 
 # pnpm
 export PNPM_HOME="/Users/em/Library/pnpm"
@@ -41,7 +40,6 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 
-export SSH_AUTH_SOCK=/Users/em/.bitwarden-ssh-agent.sock
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 alias get_idf='. /Users/em/uwu/esp-idf/export.sh'
 
