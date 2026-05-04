@@ -189,14 +189,20 @@ git config --global gpg.program gpg
 
 使用 Vim 8+ 內建套件管理器安裝 Catppuccin
 
-```
+```bash
 git clone https://github.com/catppuccin/vim.git ~/.vim/pack/vendor/start/catppuccin
 ```
 
 設定檔參見 [`vimrc`](./.vimrc)
 
-```vim
+```bash
 curl -L "https://raw.githubusercontent.com/elvisdragonmao/mac-init/refs/heads/main/.vimrc" -o ~/.vimrc
+```
+
+### Finicky
+
+```bash
+curl -L "https://raw.githubusercontent.com/elvisdragonmao/mac-init/refs/heads/main/.finicky.js" -o ~/.finicky.js
 ```
 
 ### Node.js
