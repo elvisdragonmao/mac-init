@@ -50,14 +50,6 @@ export default {
   },
 
   rewrite: [
-    {
-      // 盡量把 http 升級成 https
-      match: (url) => url.protocol === "http:",
-      url: (url) => {
-        url.protocol = "https:";
-        return url;
-      },
-    },
 
     {
       // 清掉 marketing / tracking 參數
