@@ -343,3 +343,12 @@ curl -L "https://raw.githubusercontent.com/elvisdragonmao/mac-init/refs/heads/ma
 ### 其他
 
 - [SDR++](https://www.sdrpp.org/nightly) - 軟體無線電工具
+
+## Spicetify
+
+```bash
+brew install spicetify-cli
+spicetify config spotify_path "/Applications/Spotify.app/Contents/Resources"
+curl -fsSL https://raw.githubusercontent.com/spicetify/marketplace/main/resources/install.sh | sh
+spicetify backup apply
+```
