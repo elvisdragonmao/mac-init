@@ -19,6 +19,13 @@ path_prepend() {
   esac
 }
 
+# ─── Node (先準備好，避免 pnpm/opencode global CLI 壞掉) ─────────────
+export NVM_DIR="$HOME/.nvm"
+if [[ -s "$NVM_DIR/nvm.sh" ]]; then
+  source "$NVM_DIR/nvm.sh" --no-use
+  nvm use --silent default >/dev/null 2>&1 || nvm use --silent node >/dev/null 2>&1
+fi
+
 export PNPM_HOME="$HOME/Library/pnpm"
 path_prepend "$PNPM_HOME"
 path_prepend "/opt/homebrew/opt/curl/bin"
@@ -35,18 +42,6 @@ export GPG_TTY=$(tty)
 # ─── 工具初始化 (輕量) ────────────────────────────────────────────
 eval "$(zoxide init zsh)"
 source <(fzf --zsh)
-
-# ─── 懶載入 (重的東西，第一次用到才載) ───────────────────────────
-export NVM_DIR="$HOME/.nvm"
-_load_nvm() {
-  unset -f nvm node npm npx
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-}
-nvm()  { _load_nvm; nvm  "$@"; }
-node() { _load_nvm; node "$@"; }
-npm()  { _load_nvm; npm  "$@"; }
-npx()  { _load_nvm; npx  "$@"; }
 
 fuck() {
   unset -f fuck
