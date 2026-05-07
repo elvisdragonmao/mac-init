@@ -218,6 +218,9 @@ pnpm # JavaScript 套件管理器
 
 pnpm i -g opencode # AI 助理 CLI
 pnpm i -g prettier # 程式碼格式化工具
+pnpm i -g @openai/codex
+pnpx skills add vercel-labs/agent-skills
+npx skills add DeckardGer/tanstack-agent-skills
 ```
 
 ### Karabiner
