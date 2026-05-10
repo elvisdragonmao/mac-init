@@ -102,7 +102,7 @@ curl -L "https://raw.githubusercontent.com/elvisdragonmao/mac-init/refs/heads/ma
 
 ```bash
 # A-Z 排序
-brew install ffmpeg # 影音轉檔工具
+brew install ffmpeg-full # 影音轉檔工具
 brew install git # 版本控制工具
 brew install git-filter-repo # 重寫 Git 歷史
 brew install gnupg # GPG 加密工具
@@ -116,6 +116,7 @@ brew install yt-dlp # 網路影片下載工具
 brew install eza # ls 的增強版本
 brew install zoxide # cd 的增強版本
 brew install fzf # 模糊搜尋工具
+brew install webp # WebP 圖片工具
 
 brew install --cask font-jetbrains-mono-nerd-font # 程式設計字型
 brew install --cask ghostty # 終端機
