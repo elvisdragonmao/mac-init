@@ -10,6 +10,8 @@
 
 > 快捷鍵 `Options` + `F1(☀)` 或是複製貼上網址：<a href="x-apple.systempreferences:com.apple.preference.displays">`x-apple.systempreferences:com.apple.preference.displays`</a>
 
+然後設定 Type to Siri 快捷鍵
+
 剩下一個個來太慢了，直接下指令吧：
 
 > 大多參考自：<https://macos-defaults.com>
@@ -117,6 +119,8 @@ brew install eza # ls 的增強版本
 brew install zoxide # cd 的增強版本
 brew install fzf # 模糊搜尋工具
 brew install webp # WebP 圖片工具
+brew install rsync # 檔案同步工具
+brew install miniserve # 簡易檔案伺服器
 
 brew install --cask font-jetbrains-mono-nerd-font # 程式設計字型
 brew install --cask ghostty # 終端機
