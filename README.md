@@ -228,6 +228,12 @@ pnpx skills add vercel-labs/agent-skills
 npx skills add DeckardGer/tanstack-agent-skills
 ```
 
+### CLaude Code
+
+```bash
+curl -fsSL https://claude.ai/install.sh | bash
+```
+
 ### Karabiner
 
 設定檔參見 [`karabiner.json`](./karabiner.json)
