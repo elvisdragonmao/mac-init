@@ -242,6 +242,19 @@ curl -fsSL https://claude.ai/install.sh | bash
 curl -L "https://raw.githubusercontent.com/elvisdragonmao/mac-init/refs/heads/main/karabiner.json" -o ~/.config/karabiner/karabiner.json
 ```
 
+### GPG
+
+```
+brew install pinentry-mac
+
+mkdir -p ~/.gnupg
+chmod 700 ~/.gnupg
+
+echo "pinentry-program $(which pinentry-mac)" >> ~/.gnupg/gpg-agent.conf
+
+gpgconf --kill gpg-agent
+```
+
 ## App Store
 
 有些軟體不得不使用 macOS App Store 下載：
