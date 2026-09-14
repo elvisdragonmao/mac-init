@@ -263,8 +263,14 @@ gpgconf --kill gpg-agent
 在 macOS Finder 建立兩個圖片快速動作：將圖片以 80% 品質壓縮，或等比例縮小至最大 1200×1200 後以 80% 品質輸出，WebP 則自動轉成 PNG。
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/elvisdragonmao/mac-init/refs/heads/main/webp.sh | bash
-open "$HOME/Library/Services"
+tmp="$(mktemp -d)" && \
+curl -fsSL https://github.com/elvisdragonmao/mac-init/archive/refs/heads/main.tar.gz \
+  | tar -xz -C "$tmp" --strip-components=1 && \
+mkdir -p "$HOME/Library/Services" && \
+cp -R "$tmp/2Webp.workflow" "$HOME/Library/Services/" && \
+cp -R "$tmp/2Webp 1200.workflow" "$HOME/Library/Services/" && \
+rm -rf "$tmp" && \
+killall Finder 2>/dev/null || true
 ```
 
 curl 
