@@ -264,6 +264,7 @@ gpgconf --kill gpg-agent
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/elvisdragonmao/mac-init/refs/heads/main/webp.sh | bash
+open "$HOME/Library/Services"
 ```
 
 curl 

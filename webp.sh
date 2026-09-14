@@ -186,5 +186,4 @@ done
 '
 
 killall Finder 2>/dev/null || true
-
-open "$HOME/Library/Services"
+open -a Finder "$HOME/Library/Services" 2>/dev/null || true
