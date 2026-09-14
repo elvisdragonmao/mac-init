@@ -121,11 +121,14 @@ brew install fzf # 模糊搜尋工具
 brew install webp # WebP 圖片工具
 brew install rsync # 檔案同步工具
 brew install miniserve # 簡易檔案伺服器
+brew install qpdf # PDF 處理工具
+brew install imagemagick # 圖片處理工具
 
 brew install --cask font-jetbrains-mono-nerd-font # 程式設計字型
 brew install --cask ghostty # 終端機
 brew install --cask vesktop # 第三方 Discord 用戶端
 brew install --cask telegram # 即時通訊軟體
+brew install --cask vnc-viewer # 遠端桌面軟體
 ```
 
 ### Ghostty 設定
@@ -228,7 +231,7 @@ pnpx skills add vercel-labs/agent-skills
 npx skills add DeckardGer/tanstack-agent-skills
 ```
 
-### CLaude Code
+### Claude Code
 
 ```bash
 curl -fsSL https://claude.ai/install.sh | bash
@@ -254,6 +257,16 @@ echo "pinentry-program $(which pinentry-mac)" >> ~/.gnupg/gpg-agent.conf
 
 gpgconf --kill gpg-agent
 ```
+
+### WebP
+
+在 macOS Finder 建立兩個圖片快速動作：將圖片以 80% 品質壓縮，或等比例縮小至最大 1200×1200 後以 80% 品質輸出，WebP 則自動轉成 PNG。
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/elvisdragonmao/mac-init/refs/heads/main/webp.sh | bash
+```
+
+curl 
 
 ## App Store
 
@@ -292,7 +305,6 @@ gpgconf --kill gpg-agent
 - [NeatDownloadManager](https://neatdownloadmanager.com/file/NeatDMInstaller.dmg) - 下載管理工具
 - [Proxyman](https://proxyman.com/release/osx/Proxyman_latest.dmg) - HTTP 封包分析工具
 - [Tailscale 🌐](https://pkgs.tailscale.com/stable/#macos) - 私有網路工具
-- [VNC Viewer 🌐](https://www.realvnc.com/en/connect/download/viewer/) - 遠端桌面工具
 
 ### Office 全家桶
 
