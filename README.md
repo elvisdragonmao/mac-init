@@ -94,6 +94,57 @@ defaults write com.apple.CloudSubscriptionFeatures.optIn "545129924" -bool "fals
 curl -L "https://raw.githubusercontent.com/elvisdragonmao/mac-init/refs/heads/main/com.apple.symbolichotkeys.plist" -o ~/Library/Preferences/com.apple.symbolichotkeys.plist && killall cfprefsd
 ```
 
+### 還我 F3
+
+把 F3 改回成 F3，讓我可以寫別的快捷鍵。
+
+```bash
+mkdir -p ~/Library/LaunchAgents
+
+cat > ~/Library/LaunchAgents/local.hidutil-keymapping.plist <<'EOF'
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>local.hidutil-keymapping</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/bin/hidutil</string>
+        <string>property</string>
+        <string>--set</string>
+        <string>{"UserKeyMapping":[
+            {"HIDKeyboardModifierMappingSrc":0xFF0100000010,"HIDKeyboardModifierMappingDst":0x70000003C},
+            {"HIDKeyboardModifierMappingSrc":0x0C00000221,"HIDKeyboardModifierMappingDst":0x70000003D},
+            {"HIDKeyboardModifierMappingSrc":0x10000009B,"HIDKeyboardModifierMappingDst":0x70000003E}
+        ]}</string>
+    </array>
+
+    <key>RunAtLoad</key>
+    <true/>
+</dict>
+</plist>
+EOF
+
+plutil -lint ~/Library/LaunchAgents/local.hidutil-keymapping.plist
+
+launchctl bootstrap gui/$(id -u) \
+  ~/Library/LaunchAgents/local.hidutil-keymapping.plist
+```
+
+如果要移除：
+
+```bash
+launchctl bootout gui/$(id -u) \
+  ~/Library/LaunchAgents/local.hidutil-keymapping.plist
+
+rm ~/Library/LaunchAgents/local.hidutil-keymapping.plist
+
+hidutil property --set '{"UserKeyMapping":[]}'
+```
+
 ## 軟體（指令安裝）
 
 ### Brew
